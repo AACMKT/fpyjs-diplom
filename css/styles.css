@@ -159,3 +159,28 @@ i.icon.asterisk.loading {
 .uploaded-previewer-modal .image-preview-container .ui.labeled.icon.button > .icon {
   background: none;
 }
+
+.auth-modal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.auth-body {
+  padding: 0 20px 20px 20px;
+}
+
+.auth-href {
+  padding: 20px 0 10px 0;
+}
+
+.auth-message {
+  padding: 10px 20px 0 20px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.pressed {
+  background-color: #2185d0 !important;
+}

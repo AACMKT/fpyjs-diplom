@@ -4,7 +4,7 @@
 class App {
   /**
    * С вызова этого метода начинается работа всего приложения
-   * Он производит перваоначальную настройку блоков поиска и просмотра изображений,
+   * Он производит первоначальную настройку блоков поиска и просмотра изображений,
    * а так же всплывающих окон.
    * */
   static init() {
@@ -20,6 +20,7 @@ class App {
     this.modals = {
       fileUploader: new FileUploaderModal($('.ui.modal.file-uploader-modal').modal({closable: false})),
       filePreviewer: new PreviewModal($('.ui.modal.uploaded-previewer-modal').modal({closable: false})),
+      auth: new AuthModal($('.ui.modal.small.auth-modal').modal({closable: false})),
     }
   }
 
@@ -31,5 +32,15 @@ class App {
    * */
   static getModal(name) {
     return this.modals[name];
+  };
+
+  static getToken(tokenName){
+    let token = localStorage.getItem(tokenName);
+    if (!token) {
+      const auth = this.getModal('auth');
+      auth.checkTokens();
+      auth.open();
+    };
+    return localStorage.getItem(tokenName);
   }
 }

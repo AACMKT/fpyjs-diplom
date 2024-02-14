@@ -17,7 +17,7 @@
           <div class="column ten wide">
             <div class="ui large action input search-block">
               <input type="text" placeholder="Введите id пользователя">
-              <button class="ui primary button replace">Заменить</button>
+              <button class="ui primary button disabled replace">Заменить</button>
               <button class="ui primary button add">Добавить</button>
             </div>
           </div>
@@ -49,6 +49,17 @@
         <div class="ui send-all button">Отправить все файлы</div>
       </div>
     </div>
+    <div class="ui modal small auth-modal">
+      <div class="header">Авторизация<i class="x icon"></i></div>
+      <div class="auth-message">
+        <span >Для работы сервиса вам необходимо предоставить токены от VK и Yandex</span>
+      </div>
+      <div class="auth-body">
+      </div>
+      <div class="actions">
+        <div class="ui close button">Закрыть</div>
+      </div>
+    </div>
     <div class="ui modal uploaded-previewer-modal">
       <div class="header">Просмотр загруженных файлов<i class="x icon"></i></div>
       <div class="scrolling content">
@@ -64,12 +75,12 @@
     <script src="js/api/VK.js"></script>
     <script src="js/api/Yandex.js"></script>
 
-
     <script src="js/ui/SearchBlock.js"></script>
     <script src="js/ui/ImageViewer.js"></script>
     <script src="js/ui/Modals/BaseModal.js"></script>
     <script src="js/ui/Modals/FileUploaderModal.js"></script>
     <script src="js/ui/Modals/PreviewModal.js"></script>
+    <script src="js/ui/Modals/AuthModal.js"></script>
     <script src="js/App.js"></script>
 
     <script>
