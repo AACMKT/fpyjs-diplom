@@ -6,7 +6,7 @@
 class Yandex {
   static HOST = 'https://cloud-api.yandex.net/v1/disk';
   static auth = `OAuth ${localStorage.getItem('yandexToken')}`;
-  //static auth = 'OAuth y0_AgAAAAADo1EPAADLWwAAAADemG97AOSfqwzJTGaPWF8UySugsXM3-kU'
+
   /**
    * Метод формирования и сохранения токена для Yandex API
    */
